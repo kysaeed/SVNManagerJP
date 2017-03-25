@@ -1,41 +1,41 @@
 <%include SVNManagerApp.global.header %>
-<h1>Group administration</h1>
+<h1>グループ管理</h1>
 <table class="buttonmenu">
 <com:TPanel Visible="#$this->User->isAdmin()">
-	<tr>
-		<td>
-			Create a new Group
+	<tr class="buttonmenu">
+		<td width="460">
+			グループを新規作成
 		</td>
-		<td>
-			<com:TButton ID="CreateButton" Text="Create" OnClick="onClickCreateBtn" />
+		<td width="80">
+			<com:TButton ID="CreateButton" Text="作成" OnClick="onClickCreateBtn" />
 		</td>
 	</tr>
 <com:TPanel Visible="#$this->Module->areGroups()">
-	<tr>
+	<tr class="buttonmenu">
 		<td>
-			Remove a group
+			グループを削除
 		</td>
 		<td>
-			<com:TButton ID="RemoveButton" Text="Remove" OnClick="onClickRemoveBtn"  />
-		</td>
-	</tr>
-	<tr>
-		<td>
-			Change a Group
-		</td>
-		<td>
-			<com:TButton ID="EditButton" Text="Edit" OnClick="onClickEditBtn" />
+			<com:TButton ID="RemoveButton" Text="削除" OnClick="onClickRemoveBtn"  />
 		</td>
 	</tr>
-	<tr>
+	<tr class="buttonmenu">
 		<td>
-			Export email addresses for mailer.conf
+			グループを変更
 		</td>
 		<td>
-			<com:TButton ID="ExportButton" Text="Export" OnClick="onClickExportBtn" />
+			<com:TButton ID="EditButton" Text="変更" OnClick="onClickEditBtn" />
+		</td>
+	</tr>
+	<tr class="buttonmenu">
+		<td>
+			mailer.confにメールアドレスをエクスポート
+		</td>
+		<td>
+			<com:TButton ID="ExportButton" Text="エクスポート" OnClick="onClickExportBtn" />
 		</td>
 	</tr>
 </com:TPanel>
 </table>
-</com:TPanel>	
+</com:TPanel>
 <%include SVNManagerApp.global.footer %>

@@ -1,7 +1,7 @@
 <%include SVNManagerApp.global.header %>
 <p>
-Welcome! </br>
+ようこそ！</br>
 <br/>
-Please use the menu.</br>
+メインメニューから実行したい操作を選択してください</br>
 </p>
 <%include SVNManagerApp.global.footer %>

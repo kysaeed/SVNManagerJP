@@ -1,35 +1,35 @@
 body{
-	background-color : #FFFFF8;
+	background-color : #f9f9f9;
 	font-family : Arial, Helvetica, sans-serif;
 }
 
 a{
-	color : #006400;
+	color : #7d7d7d;
 }
 
-a:hover{color : Maroon;}
+a:hover{color : #0836fe;}
 
 a.menu{
-	color : darkgreen;
-	background : lightgreen;
+	color : #f2f5fe;
+	background : #444;
 }
 a.menu:hover{
-	color : white;
-	background  : lightgreen;
+	color : #444;
+	background  : #f2f5fe;
 }
 table.menu {
 	vertical-align : top
-	border: 1px solid teal;
+	border: 1px solid #1e1e4b;
 	color : lightblue;
-	background : lightgreen;
+	background : #6c6c6c;
 }
 th.menu {
 	color: white;
-	background : lightgreen;
+	background : #2d2d2d;
 }
 
 table.main {
-	border: 0px solid teal;
+	border: 0px solid #1e2b4b;
 	padding-right: 1cm;
 }
 td.main {
@@ -38,23 +38,30 @@ td.main {
 }
 
 table.buttonmenu {
-	border: 0px solid teal;
+	border: 0px solid #1e1e4b;
+	border-collapse:collapse;
+}
+tr.buttonmenu {
+	border-top: 0px solid #1e1e4b;
+	border-right: 0px solid #1e1e4b;
+	border-left: 0px solid #1e1e4b;
+	border-bottom: 1px dashed #1e1e4b;
 }
 
 table {
-	border: 1px solid teal;
+	border: 1px solid #1e1e4b;
 }
 th {
 	color: white;
-	background: teal;
-} 
+	background: #333;
+}
 .altth {
 	color: white;
-	background: green;
+	background: #180b87;
 }
 
 .row1 {
-	background: #EEFFEE;
+	background: #EEEEFF;
 }
 .row2 {
 	background: #FFFFFF;
@@ -64,5 +71,5 @@ th {
 }
 
 .message {
-	color: green;
+	color: #190b87;
 }

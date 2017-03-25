@@ -1,67 +1,67 @@
 <%include SVNManagerApp.global.header %>
-<h1>Add User</h1>
+<h1>ユーザ追加</h1>
 <com:TPanel ID="AddPanel" Visible="true">
 <table cellspacing="0" cellpadding="5">
 	<tr>
-		<th align="right">Name</th>
+		<th align="right">ユーザ名</th>
 		<td>
 			<com:TTextBox ID="UserName"/>
-			<com:TRequiredFieldValidator ControlToValidate="UserName" ErrorMessage="User name is required"/>
-			<com:TCustomValidator 		ControlToValidate="UserName" OnServerValidate="onCheckUsername" ErrorMessage="Name is already taken" Display="Dynamic" />
+			<com:TRequiredFieldValidator ControlToValidate="UserName" ErrorMessage="ユーザ名を入力してください"/>
+			<com:TCustomValidator 		ControlToValidate="UserName" OnServerValidate="onCheckUsername" ErrorMessage="このユーザ名はすでに使われています" Display="Dynamic" />
 		</td>
 	</tr>
 	<tr>
-		<th align="right">Password</th>
+		<th align="right">パスワード</th>
 		<td>
 			<com:TTextBox ID="Password" TextMode="Password" />
-			<com:TRequiredFieldValidator ControlToValidate="Password" ErrorMessage="Password is required"/>
+			<com:TRequiredFieldValidator ControlToValidate="Password" ErrorMessage="パスワードは必須です"/>
 		</td>
 	</tr>
 	<tr>
-		<th align="right">Repeat password</th>
+		<th align="right">パスワード（確認）</th>
 		<td>
 			<com:TTextBox ID="RepeatPassword" TextMode="Password" />
-			<com:TCompareValidator ControlToValidate="Password" ControlToCompare="RepeatPassword" Display="Dynamic">Your password entries did not match.</com:TCompareValidator>
-			<com:TRequiredFieldValidator ControlToValidate="RepeatPassword" ErrorMessage="Repeat is required"/>			
+			<com:TCompareValidator ControlToValidate="Password" ControlToCompare="RepeatPassword" Display="Dynamic">再入力されたパスワードが違います</com:TCompareValidator>
+			<com:TRequiredFieldValidator ControlToValidate="RepeatPassword" ErrorMessage="パスワードは必須です"/>
 		</td>
 	</tr>
 	<tr>
-		<th align="right">Email</th>
+		<th align="right">メールアドレス</th>
 		<td>
 			<com:TTextBox ID="Email" Columns="32" />
-			<com:TRequiredFieldValidator ControlToValidate="Email" ErrorMessage="Email is required"/>
-			<com:TEmailAddressValidator ControlToValidate="Email" Display="Dynamic">Invalid e-mail address!</com:TEmailAddressValidator>
+			<com:TRequiredFieldValidator ControlToValidate="Email" ErrorMessage="メールアドレスは必須です"/>
+			<com:TEmailAddressValidator ControlToValidate="Email" Display="Dynamic">無効なメールアドレスです</com:TEmailAddressValidator>
 		</td>
 	</tr>
 	<tr>
-		<th align="right">Admin</th><td><com:TCheckBox ID="Admin" /></td>
+		<th align="right">管理者権限</th><td><com:TCheckBox ID="Admin" /></td>
 	</tr>
 	<tr>
-		<th align="right">Repository Grants</th>
+		<th align="right">保持可能なリポジトリ数</th>
 			<td>
 				<com:TTextBox ID="Grants" Text="0" />
-				<com:TRequiredFieldValidator ControlToValidate="Grants" ErrorMessage="Grants is required"/>				
-				<com:TRangeValidator ControlToValidate="Grants" MinValue="0" MaxValue="1000" ValueType="Integer" ErrorMessage="Please enter a number between 0 and 1000" />
+				<com:TRequiredFieldValidator ControlToValidate="Grants" ErrorMessage="保持可能なリポジトリ数の入力は必須です"/>
+				<com:TRangeValidator ControlToValidate="Grants" MinValue="0" MaxValue="99" ValueType="Integer" ErrorMessage="0～99の数値を入力してください" />
 			</td>
 	</tr>
 	<tr>
-		<th class="altth" align="right">Password</th>
+		<th class="altth" align="right">管理者パスワード</th>
 		<td>
 			<com:TTextBox ID="UserPassword" TextMode="Password" />
-			<com:TRequiredFieldValidator ControlToValidate="UserPassword" ErrorMessage="Please enter your password" Display="Dynamic"/>
-			<com:TCustomValidator ControlToValidate="UserPassword" OnServerValidate="onCheckPassword" ErrorMessage="Wrong password" Display="Dynamic" />
-		</td>		
+			<com:TRequiredFieldValidator ControlToValidate="UserPassword" ErrorMessage="管理者パスワードを入力してください" Display="Dynamic"/>
+			<com:TCustomValidator ControlToValidate="UserPassword" OnServerValidate="onCheckPassword" ErrorMessage="パスワードが違います" Display="Dynamic" />
+		</td>
 	</tr>
 	<tr>
 		<tr></td>
 		<tr></td>
-		<td><com:TButton ID="ConfirmButton" Text="Confirm" OnClick="onConfirmBtn" /></td>
-		<td><com:TButton ID="CancelButton" Text="Cancel" CausesValidation="false" OnClick="onCancelBtn"/></td>
+		<td><com:TButton ID="ConfirmButton" Text="登録" OnClick="onConfirmBtn" /></td>
+		<td><com:TButton ID="CancelButton" Text="キャンセル" CausesValidation="false" OnClick="onCancelBtn"/></td>
 	</tr>
 </table>
 </com:TPanel>
 <com:TPanel ID="ConfirmationPanel" Visible="false">
-	<h3 class="message">User added!</h4>
-	<com:TLinkButton Text="Go back to User Admin menu" OnClick="onGoBack"/>
+	<h3 class="message">ユーザを追加しました！</h3>
+	<com:TLinkButton Text="ユーザ管理メニューに戻る" OnClick="onGoBack"/>
 </com:TPanel>
 <%include SVNManagerApp.global.footer %>

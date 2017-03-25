@@ -1,47 +1,47 @@
 <%include SVNManagerApp.global.header %>
-<h1>User administration</h1>
+<h1>ユーザ管理</h1>
 <table class="buttonmenu">
 	<com:TPanel Visible="#$this->User->isAdmin()">
-		<tr>
-			<td>
-				Invite a new user to the repository system
+		<tr class="buttonmenu">
+			<td width="460">
+				新規ユーザをリポジトリに招待
 			</td>
-			<td>
-				<com:TButton ID="InviteButton" Text="Invite" OnClick="onClickInviteBtn" />
-			</td>
-		</tr>
-		<tr>
-			<td>
-				Manage existing invitations
-			</td>
-			<td>
-				<com:TButton ID="InviteManageButton" Text="Manage Invite" OnClick="onClickManageInviteBtn" />
+			<td width="80">
+				<com:TButton ID="InviteButton" Text="招待" OnClick="onClickInviteBtn" />
 			</td>
 		</tr>
-		<tr>
+		<tr class="buttonmenu">
 			<td>
-				Add a new user to the repository system
+				招待情報の管理
 			</td>
 			<td>
-				<com:TButton ID="AddButton" Text="Add" OnClick="onClickAddBtn" />
+				<com:TButton ID="InviteManageButton" Text="管理" OnClick="onClickManageInviteBtn" />
+			</td>
+		</tr>
+		<tr class="buttonmenu">
+			<td>
+				ユーザの追加
+			</td>
+			<td>
+				<com:TButton ID="AddButton" Text="追加" OnClick="onClickAddBtn" />
 			</td>
 		</tr>
 	</com:TPanel>
-	<tr>
+	<tr class="buttonmenu">
 		<td>
-			Edit a user
+			ユーザの設定変更
 		</td>
 		<td>
-			<com:TButton ID="EditButton" Text="Edit" OnClick="onClickEditBtn" />
+			<com:TButton ID="EditButton" Text="変更" OnClick="onClickEditBtn" />
 		</td>
 	</tr>
 	<com:TPanel Visible="#$this->User->isAdmin()">
-		<tr>
+		<tr class="buttonmenu">
 			<td>
-				Remove a user from the repository system
+				ユーザの削除
 			</td>
 			<td>
-				<com:TButton ID="RemoveButton" Text="Remove" OnClick="onClickRemoveBtn" Visible="#$this->User->isAdmin()"/>
+				<com:TButton ID="RemoveButton" Text="削除" OnClick="onClickRemoveBtn" Visible="#$this->User->isAdmin()"/>
 			</td>
 		</tr>
 	</com:TPanel>

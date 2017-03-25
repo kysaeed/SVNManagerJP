@@ -1,8 +1,8 @@
 <%include SVNManagerApp.global.header %>
-<h1>Export Mailer Info</h1>
+<h1>メール設定エクスポート</h1>
 <PRE>
 ####################################################################
-## This data is intended to be cut and pasted into a mailer.conf 
+## This data is intended to be cut and pasted into a mailer.conf
 ## file used with the mailer.py script
 ####################################################################
 ## Created <% echo date("l, Y-F-d h:i:s A"); %>
