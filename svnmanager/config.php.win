@@ -3,8 +3,8 @@
 //  SVNManager config.php file for Windows based servers
 //
 
-//Warning: Please set this correct, if you want support for exotic repository names 
-$lang						= "us";
+//Warning: Please set this correct, if you want support for exotic repository names
+$lang						= "jp";
 
 $htpassword_cmd     = "c:\\Progra~1\\Apache~1\\Apache2\\bin\\htpasswd";
 $svn_cmd            = "c:\\PROGRA~1\\Subversion\\bin\\svn";

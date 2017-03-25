@@ -5,8 +5,8 @@
 
 //You can find the available localizations in a linux shell by typing: locale -a
 //
-//Warning: Please set this correct if you want to support exotic repository names 
-$lang						= "en_US.UTF-8";
+//Warning: Please set this correct if you want to support exotic repository names
+$lang						= "ja_JP.UTF-8";
 
 //Shell command's
 $htpassword_cmd 			= 	"/usr/bin/htpasswd";
