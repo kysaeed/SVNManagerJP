@@ -21,7 +21,7 @@
 	</tr>
 	<tr>
 		<td><com:TButton ID="Confirm" Text="実行" OnClick="onConfirmBtn"/></td>
-		<td align="right" ><com:TButton ID="キャンセル" Text="Cancel" OnClick="onCancelBtn" CausesValidation="false" />
+		<td align="right" ><com:TButton ID="Cancel" Text="キャンセル" OnClick="onCancelBtn" CausesValidation="false" />
 	</tr>
 </com:TPanel>
 <com:TPanel ID="ConfirmationPanel" Visible="false">

@@ -17,10 +17,10 @@
 	</tr>
 	<tr>
 		<td>
-			<com:TButton ID="Confirm" Text="Confirm" OnClick="onConfirmBtn" />
+			<com:TButton ID="Confirm" Text="確認" OnClick="onConfirmBtn" />
 		</td>
 		<td align="right">
-			<com:TButton ID="Cancel" Text="Cancel" CausesValidation="false" OnClick="onCancelBtn" />
+			<com:TButton ID="Cancel" Text="キャンセル" CausesValidation="false" OnClick="onCancelBtn" />
 		</td>
 	</tr>
 </table>
