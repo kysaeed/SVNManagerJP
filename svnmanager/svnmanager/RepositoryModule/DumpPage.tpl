@@ -9,7 +9,7 @@
 		<tr class="row1">
 			<td><%= htmlspecialchars(ucfirst($this->Parent->Data['repositoryname'])) %></td>
 			<td><%= htmlspecialchars($this->Parent->Data['owner']) %>
-			<td><com:TLinkButton Text="dump" CommandName="dump" CommandParameter="#$this->Parent->Data['id']" /></td>
+			<td><com:TLinkButton Text="ダンプ" CommandName="dump" CommandParameter="#$this->Parent->Data['id']" /></td>
 		</tr>
 	</prop:ItemTemplate>
 	<prop:AlternatingItemTemplate>

@@ -10,7 +10,7 @@
 		<tr class="row1">
 			<td><%= htmlspecialchars($this->Parent->Data['groupname']) %></td>
 			<td><%= htmlspecialchars($this->Parent->Data['admin']) %>
-			<td><com:TLinkButton Text="select" CommandName="select" CommandParameter="#$this->Parent->Data['id']" /></td>
+			<td><com:TLinkButton Text="選択" CommandName="select" CommandParameter="#$this->Parent->Data['id']" /></td>
 		</tr>
 	</prop:ItemTemplate>
 	<prop:AlternatingItemTemplate>
