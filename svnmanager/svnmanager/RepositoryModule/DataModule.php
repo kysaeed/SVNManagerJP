@@ -242,7 +242,7 @@ class DataModule extends TModule
 	public function getGroupname($id)
 	{
 		$s_id = $this->Database->qstr($id);
-		$group = $this->Database->Execute("SELECT * FROM groups WHERE id=" . $s_id);
+		$group = $this->Database->Execute("SELECT * FROM `groups` WHERE id=" . $s_id);
 
 		if($group)
 			return $group->fields['name'];
@@ -263,7 +263,7 @@ class DataModule extends TModule
 	public function getGroupId($name)
 	{
 		$s_name = $this->Database->qstr($name);
-		$id = $this->Database->Execute("SELECT * FROM groups WHERE name=" . $s_name);
+		$id = $this->Database->Execute("SELECT * FROM `groups` WHERE name=" . $s_name);
 		if($id)
 			return $id->fields['id'];
 		else

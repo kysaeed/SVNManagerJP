@@ -191,7 +191,7 @@ class SVNManagerUser extends TUser
 			else
 				$this->setAdmin(false);
 			
-			$groups = $adodb->Execute("SELECT * FROM groups WHERE adminid=$s_userid");
+			$groups = $adodb->Execute("SELECT * FROM `groups` WHERE adminid=$s_userid");
 			if($groups->RecordCount()>0)
 				$this->setGroup(true);
 			else

@@ -74,7 +74,7 @@ class DataModule extends TModule
 	public function isTaken($name)
 	{
 		$s_name = $this->Database->qstr($name);
-		$result = $this->Database->Execute("SELECT * FROM groups WHERE name=" . $s_name);
+		$result = $this->Database->Execute("SELECT * FROM `groups` WHERE name=" . $s_name);
 		return $result->RecordCount() > 0; 			
 	}
 	
@@ -83,7 +83,7 @@ class DataModule extends TModule
 		$userid = $this->User->getId();
 		$s_name = $this->Database->qstr($name);
 		$s_userid = $this->Database->qstr($userid);
-		$result = $this->Database->Execute("INSERT INTO groups (id, name, adminid) VALUES (null, $s_name, $s_userid)");
+		$result = $this->Database->Execute("INSERT INTO `groups` (id, name, adminid) VALUES (null, $s_name, $s_userid)");
 		$groupid = $this->Database->Insert_ID();
 		$result->Close();
 		$this->rebuildAccessFile();		
@@ -96,7 +96,7 @@ class DataModule extends TModule
 		$s_id = $this->Database->qstr($id);
 		$result = $this->Database->Execute("DELETE FROM groupprivileges WHERE groupid=$s_id");
 		$result->Close();
-		$result = $this->Database->Execute("DELETE FROM groups WHERE id=$s_id");
+		$result = $this->Database->Execute("DELETE FROM `groups` WHERE id=$s_id");
 		$result->Close();
 		$this->rebuildAccessFile();
 	}
@@ -105,7 +105,7 @@ class DataModule extends TModule
 	{
 		$s_id = $this->Database->qstr($id);
 		$s_newname = $this->Database->qstr($newname);
-		$result = $this->Database->Execute("UPDATE groups SET name=$s_newname WHERE id=$s_id");
+		$result = $this->Database->Execute("UPDATE `groups` SET name=$s_newname WHERE id=$s_id");
 		$result->Close();
 		$this->rebuildAccessFile();
 	}
@@ -114,14 +114,14 @@ class DataModule extends TModule
 	{
 		$s_id = $this->Database->qstr($id);
 		$s_newownerid = $this->Database->qstr($newownerid);
-		$result = $this->Database->Execute("UPDATE groups SET adminid=$s_newownerid WHERE id=$s_id");
+		$result = $this->Database->Execute("UPDATE `groups` SET adminid=$s_newownerid WHERE id=$s_id");
 		$result->Close();
 		$this->rebuildAccessFile();
 	}
 	
 	public function areGroups()
 	{
-		$result = $this->Database->Execute("SELECT * FROM groups");
+		$result = $this->Database->Execute("SELECT * FROM `groups`");
 		return $result->recordCount()>0;
 	}
 

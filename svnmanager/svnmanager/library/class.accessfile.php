@@ -38,7 +38,7 @@ class AccessFile
 		$accessfile = "";
 
 		//Groups		
-		$groups = $this->database->Execute("SELECT * FROM groups ORDER BY name");
+		$groups = $this->database->Execute("SELECT * FROM `groups` ORDER BY name");
 
 		if ($groups) {
 			$accessfile .= "[groups]\n";
@@ -154,7 +154,7 @@ class AccessFile
 
 					$s_groupid = $this->database->qstr($groupid);
 					
-					$group = $this->database->Execute("SELECT * FROM groups WHERE id=" . $s_groupid);
+					$group = $this->database->Execute("SELECT * FROM `groups` WHERE id=" . $s_groupid);
 					if (!$group) {
 						error_log("Database inconsistent, can't find group that has privilege'");
 						exit;

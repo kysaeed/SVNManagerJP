@@ -150,7 +150,7 @@ class GroupPrivilegesEditPage extends TPage
 		if(!$this->isPostBack())
 		{		
 			$groupnames = array();
-			$groupresults = $this->Module->Database->Execute("SELECT * FROM groups ORDER BY name");
+			$groupresults = $this->Module->Database->Execute("SELECT * FROM `groups` ORDER BY name");
 		
 			while(!$groupresults->EOF)
 			{															
