@@ -228,7 +228,7 @@ class DataModule extends TModule
 	$s_admin_id = $this->Database->qstr($admin_id);
 	
 	//Change Groups 
-	$this->Database->Execute("UPDATE groups SET adminid=$s_admin_id WHERE adminid=$s_id"); 
+	$this->Database->Execute("UPDATE `groups` SET adminid=$s_admin_id WHERE adminid=$s_id"); 
  
 	//Change Repositories 
 	$this->Database->Execute("UPDATE repositories SET ownerid=$s_admin_id WHERE ownerid=$s_id"); 

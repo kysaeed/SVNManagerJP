@@ -10,7 +10,7 @@ class EditPage extends TPage
 			$groupid = $_GET['GroupID'];
 			$s_groupid = $this->Module->Database->qstr($groupid);
 		
-			$results = $this->Module->Database->Execute("SELECT * FROM groups WHERE id=$s_groupid");
+			$results = $this->Module->Database->Execute("SELECT * FROM `groups` WHERE id=$s_groupid");
 
 			$fields = $results->fields;
 			$adminid = $fields['adminid'];
@@ -91,7 +91,7 @@ class EditPage extends TPage
 		else
 		{
 			$s_name=$this->Module->Database->qstr($name);
-			$results = $this->Module->Database->Execute("SELECT * FROM groups WHERE name=" . $s_name);
+			$results = $this->Module->Database->Execute("SELECT * FROM `groups` WHERE name=" . $s_name);
 			if($results->RecordCount()==0)
 				$param->isValid=true;		
 		}

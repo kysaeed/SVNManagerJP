@@ -27,7 +27,7 @@ class ExportPage extends TPage
   
   protected function getGroupListData()
   {
-  	$groups = $this->Module->Database->Execute("SELECT * FROM groups ORDER BY name");
+  	$groups = $this->Module->Database->Execute("SELECT * FROM `groups` ORDER BY name");
 
     // 2006-03-29 PDurden - a bug in mailer.py causes the to_addr mapping to
     //    not work with mixed case list names, so set the name to lower

@@ -144,7 +144,7 @@ class DataModule extends TModule
           case "groups":
             //Groups
             $this->Database->Execute("
-              CREATE TABLE groups (
+              CREATE TABLE `groups` (
                 id integer primary key".$ac.",
                 name varchar(32) NOT NULL default '',
                 adminid integer NOT NULL default '0'									

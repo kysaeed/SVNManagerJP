@@ -8,10 +8,10 @@ class RemovePage extends TPage
 		$userid = $this->User->getId();
 		
 		if($this->User->IsAdmin())
-			$results = $this->Module->Database->Execute("SELECT * FROM groups ORDER BY name");
+			$results = $this->Module->Database->Execute("SELECT * FROM `groups` ORDER BY name");
 		else {
 			$s_userid = $this->Module->Database->qstr($userid);
-			$results = $this->Module->Database->Execute("SELECT * FROM groups WHERE adminid=" . $s_userid);
+			$results = $this->Module->Database->Execute("SELECT * FROM `groups` WHERE adminid=" . $s_userid);
 		}		
 		if($results)
 		{
